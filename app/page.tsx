@@ -102,7 +102,7 @@ export default function Home() {
         const {success, error} = await checkDB(url, alias)
 
         if (success && error === "") {
-            setShortenedURL(` http://localhost:3000/${alias}`)
+            setShortenedURL(` https://mp-5-iota.vercel.app/${alias}`)
         }
         else {
             setError(error)
@@ -129,7 +129,7 @@ export default function Home() {
                 {/*input alias*/}
                 <StyledH3>Custom Alias</StyledH3>
                 <StyledP>
-                    http://localhost:3000/
+                    https://mp-5-iota.vercel.app/
                     <StyledInput type="text" value={alias} placeholder="your-custom-alias" onChange={(e) => setAlias(e.target.value)}/>
                 </StyledP>
 
